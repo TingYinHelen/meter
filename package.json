@@ -1,0 +1,28 @@
+{
+  "name": "meter",
+  "version": "1.0.0",
+  "description": "show active data and compare with the total data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TingYinHelen/meter.git"
+  },
+  "keywords": [
+    "javascript",
+    "meter",
+    "jquery",
+    "jquery-plugin"
+  ],
+  "author": "HelenYin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TingYinHelen/meter/issues"
+  },
+  "homepage": "https://github.com/TingYinHelen/meter#readme",
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
