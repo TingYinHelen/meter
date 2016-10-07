@@ -13,7 +13,7 @@ $.fn.helenMeter = function(opt) {
   meter.value = opt.value;
   meter.maxValue = opt.maxValue;
   meter.render = function() {
-    $("#num").html(numValue);
+    $("#num").html(Math.round(numValue));
     ctx.fillStyle = "#FF0000";
     let arcX = me.width()/2;
     let arcY = me.height();
@@ -51,7 +51,7 @@ $.fn.helenMeter = function(opt) {
   meter.update = function() {
     let valueDif = (endRad - startRad)*(meter.value/meter.maxValue);
     let singleData = valueDif/36;
-    let singleNum = Math.floor(meter.value/36);
+    let singleNum = meter.value/36;
     let singleDiff = diff.toFixed(2);
     let singleValueDif = valueDif.toFixed(2);
     if (singleDiff !== singleValueDif) {

@@ -1,7 +1,6 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 let $ = require("jquery");
 $.fn.helenMeter = function(opt) {
-  alert(1)
   let me = this;
   let meter = $(this).data("meter");
   let displayRad = 0;
@@ -15,7 +14,7 @@ $.fn.helenMeter = function(opt) {
   meter.value = opt.value;
   meter.maxValue = opt.maxValue;
   meter.render = function() {
-    $("#num").html(numValue);
+    $("#num").html(Math.round(numValue));
     ctx.fillStyle = "#FF0000";
     let arcX = me.width()/2;
     let arcY = me.height();
@@ -53,7 +52,7 @@ $.fn.helenMeter = function(opt) {
   meter.update = function() {
     let valueDif = (endRad - startRad)*(meter.value/meter.maxValue);
     let singleData = valueDif/36;
-    let singleNum = Math.floor(meter.value/36);
+    let singleNum = meter.value/36;
     let singleDiff = diff.toFixed(2);
     let singleValueDif = valueDif.toFixed(2);
     if (singleDiff !== singleValueDif) {
