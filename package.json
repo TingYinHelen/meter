@@ -1,5 +1,5 @@
 {
-  "name": "meter",
+  "name": "data-meter",
   "version": "1.0.0",
   "description": "show active data and compare with the total data",
   "main": "index.js",
